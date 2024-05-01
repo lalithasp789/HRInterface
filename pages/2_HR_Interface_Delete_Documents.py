@@ -60,7 +60,7 @@ if st.button("Delete Selected Policy"):
         client = QdrantClient(
         url=qdrant_url,
         api_key=qdrant_api_key)
-        embeddings = st.secrets['embeddings']
+        embeddings = embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
         #embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
         collection_name="hr_chatbot" #collection_name="test_collection"
 
