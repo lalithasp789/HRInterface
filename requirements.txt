@@ -5,3 +5,4 @@ pymongo
 urllib3
 qdrant_client
 pypdf
+sentence_transformers
