@@ -1,0 +1,7 @@
+streamlit_extras
+langchain == 0.0.330
+streamlit
+pymongo
+urllib3
+qdrant_client
+pypdf
