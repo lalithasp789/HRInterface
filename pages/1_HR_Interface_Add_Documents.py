@@ -72,7 +72,7 @@ if st.button("Upload selected files"):
 
 
     #embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-    embeddings = st.secrets['embeddings']
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
 
     qdrant_url = st.secrets['qdrant_url']
     qdrant_api_key = st.secrets['qdrant_api_key']
