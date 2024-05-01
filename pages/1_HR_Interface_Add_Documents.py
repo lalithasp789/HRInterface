@@ -77,7 +77,14 @@ if st.button("Upload selected files"):
     qdrant_url = st.secrets['qdrant_url']
     qdrant_api_key = st.secrets['qdrant_api_key']
   
-    qdrant = st.secrets['qdrant']
+    qdrant = Qdrant.from_documents(
+      text_chunks,
+      embeddings,
+      url=qdrant_url,
+      prefer_grpc=True,
+      api_key=qdrant_api_key,
+      collection_name="hr_chatbot", #collection_name="test_collection"
+      )
 
     shutil.rmtree(directory)
     st.success(f"Selected policy/policies uploaded successfully....!")
