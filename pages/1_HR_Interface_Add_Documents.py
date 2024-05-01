@@ -49,7 +49,7 @@ if st.button("Upload selected files"):
     for uploaded_file in uploaded_files:
         # Save the file to the temporary folder
         output_temp_file_path = os.path.join(temp_folder, uploaded_file.name)
-        meta_data = {"policy name":uploaded_file.name,"file path":directory, "source":directory+"\\"+uploaded_file.name}
+        meta_data = {"policy name":uploaded_file.name,"file path":directory, "source":directory+"/"+uploaded_file.name}
         result = collection.insert_one(meta_data)
 
         with open(output_temp_file_path, 'wb') as output_temp_file:
